@@ -57,7 +57,10 @@ class ResponseDialog extends StatelessWidget {
       actions: <Widget>[
         ElevatedButton(
           child: Text(buttonText),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () {
+            Navigator.pop(context);
+            Navigator.pop(context);
+          },
         )
       ],
     );

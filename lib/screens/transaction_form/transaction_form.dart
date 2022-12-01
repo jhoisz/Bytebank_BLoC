@@ -1,11 +1,11 @@
-import 'package:bytebank2/components/container.dart';
-import 'package:bytebank2/components/transaction_auth_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:uuid/uuid.dart';
 
+import '../../components/container.dart';
 import '../../components/progress.dart';
 import '../../components/response_dialog.dart';
+import '../../components/transaction_auth_dialog.dart';
 import '../../models/contact.dart';
 import '../../models/transaction.dart';
 import 'cubit/transaction_form_cubit.dart';
@@ -23,7 +23,7 @@ class TransactionFormContainer extends BlocContainer {
         child: BlocListener<TransactionFormCubit, TransactionFormState>(
           listener: (context, state) {
             if (state is SentState) {
-              Navigator.pop(context);
+              _showSuccessfullMessage(context);
             }
             if (state is FatalErrorTransactionFormState) {
               _showFailureMessage(context, state.message);
@@ -37,11 +37,10 @@ class TransactionFormContainer extends BlocContainer {
 class TransactionForm extends StatefulWidget {
   final Contact contact;
 
-  // ignore: use_key_in_widget_constructors
-  const TransactionForm(this.contact);
+  const TransactionForm(this.contact, {super.key});
 
   @override
-  _TransactionFormState createState() => _TransactionFormState();
+  State<TransactionForm> createState() => _TransactionFormState();
 }
 
 class _TransactionFormState extends State<TransactionForm> {
