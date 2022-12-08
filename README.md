@@ -67,13 +67,11 @@ context.read<CounterCubit>().increment();
 
 ## :sparkles: Funcionalidades do projeto
 
-<!-- A aplicação possui as mesmas funcionalidades do projeto [Bytebank API](https://github.com/jhoisz/Bytebank-api), e como adição possui tratamento e demonstração dos diferentes tipos de erros que podem ocorrer.
+A aplicação possui a funcionalidade de gerenciamento dos estados das telas utilizando o sistema de BLoC, foi adicionada a função de alteração de nome também.
 
 <p align="center">
-  <img src="https://github.com/jhoisz/Bytebank-api-v2/blob/main/bytebankv2apiv2.gif" alt= "Gif colorido da aplicação desenvolvida demonstrando os erros possiveis." />
-</p> -->
-
-> :construction: Projeto em construção :construction:
+  <img src="https://github.com/jhoisz/Bytebank_BLoC/blob/main/bloc.gif" alt= "Gif colorido da aplicação desenvolvida." />
+</p> 
 
 ## :hammer: Tecnologias usadas
 
